@@ -31,4 +31,4 @@ gulp.task('browser-sync',['styles'], function() {
 });
 gulp.task('default', ['browser-sync']);
 */
-gulp.tast('default',['styles']);
+gulp.task('default',['styles']);
