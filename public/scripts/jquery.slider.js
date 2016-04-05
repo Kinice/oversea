@@ -27,7 +27,7 @@
     },
     autoShow : function(){
       this.index += 1;
-      if(this.index <= 3 - 1){
+      if(this.index <= 2 - 1){
           this.slide(this.index);
       }else{
           this.index = 0;
