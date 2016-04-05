@@ -17,7 +17,7 @@ gulp.task('styles', function() {
     .pipe(reload({stream: true}))
     .pipe(notify({ message: 'styles task complete' }));
 });
-/*
+
 gulp.task('browser-sync',['styles'], function() {
     Browsersync.init({
         proxy: "http://localhost:63342/oversea/views/index.html",
@@ -27,8 +27,8 @@ gulp.task('browser-sync',['styles'], function() {
     });
     gulp.watch('./static/less/*.less', ['styles']);
     gulp.watch('../views/*.html').on('change', reload);
-    gulp.watch('./static/script/*.js').on('change', reload);
+    gulp.watch('../public/scripts/*.js').on('change', reload);
 });
 gulp.task('default', ['browser-sync']);
-*/
-gulp.task('default',['styles']);
+/*
+gulp.task('default',['styles']);*/

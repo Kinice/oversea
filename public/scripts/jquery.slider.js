@@ -27,14 +27,18 @@
     },
     autoShow : function(){
       this.index += 1;
-      if(this.index <= 2 - 1){
-          slider.slide(this.index);
+      if(this.index <= 3 - 1){
+          this.slide(this.index);
       }else{
           this.index = 0;
-          slider.slide(this.index);
+          this.slide(this.index);
       }
-      setInterval(this.autoShow,5000);
+    },
+    init : function(){
+      this.$con.eq(0).css('opacity','1');
+      this.$con.eq(0).siblings().css('opacity','0');
+      setInterval(this.autoShow.bind(this),5000);
     }
   }
-  slider.autoShow();
+  slider.init();
 })();
