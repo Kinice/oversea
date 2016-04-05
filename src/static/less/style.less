@@ -1,4 +1,11 @@
 //header
+.g-hd{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+}
 .g-wtop{
   width: 100%;
   padding-left: 10px;
@@ -55,13 +62,8 @@
   }
 }
 .g-bd{
+  height: 100%;
   .m-slider{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
     width: 100%;
     height: 100%;
     &:after{
@@ -79,11 +81,34 @@
       left: 0;
       width: 100%;
       height: 100%;
+      .button{
+        background-color: #fff;
+        padding: 6px 8px;
+        border-radius: 2px;
+        margin-left:10px;
+        box-shadow: 2px 2px #000;
+      }
       .back-img1{
         width: 100%;
         height: 100%;
         background-image: url(../images/test1.jpg);
         background-size: cover;
+        .words{
+          z-index: 2;
+          position: absolute;
+          top: 40%;
+          right: 7%;
+          text-align: right;
+          h2{
+            color: #fff;
+            font-size: 50px;
+          }
+          p{
+            color: #fff;
+            font-size: 25px;
+            margin-bottom: 20px;
+          }
+        }
       }
       .back-img2{
         width: 100%;
