@@ -10,11 +10,41 @@
   font-weight: 500;
 }
 .g-hd{
-  position: absolute;
+  transition:margin-top 0.3s ease-in-out;
+  -webkid-transition:margin-top 0.3s ease-in-out;
+  position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
+  .sub-nav{
+    height: 50px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.6);
+    .nav-inner{
+      width: 1200px;
+      line-height: 50px;
+      .sub-left{
+        float:left;
+        h2{
+          font-size: 20px;
+          line-height: 50px;
+          padding-left: 20px;
+        }
+      }
+      .sub-right{
+        float: right;
+        li{
+          a {
+            color: #000;
+          }
+          float: left;
+          padding-left: 20px;
+        }
+      }
+    }
+
+  }
 }
 .g-wtop{
   padding-left: 10px;
@@ -36,6 +66,8 @@
     width: 960px;
     margin: 0 auto;
     .logo{
+      transition:margin-top 0.3s ease-in-out;
+      -webkid-transition:margin-top 0.3s ease-in-out;
       float: left;
       margin-left: -40px;
       border: 2px solid #000;
@@ -111,10 +143,13 @@
         height: 100%;
         background-image: url(../images/test3.jpg);
         background-size: cover;
+        background-position: 50% 50%;
         .words{
           z-index: 2;
           position: absolute;
-          top: 40%;
+          -webkit-transform:translateY(-50%);
+          transform:translateY(-50%);
+          top: 50%;
           right: 7%;
           text-align: right;
           h2{
@@ -133,12 +168,16 @@
         height: 100%;
         background-image: url(../images/test2.jpg);
         background-size: cover;
+        background-position: 50% 50%;
         .words{
-          position: relative;
+          position: absolute;
           z-index: 2;
           width: 100%;
           text-align: center;
-          padding-top: 20%;
+          top:50%;
+          left: 50%;
+          -webkit-transform:translate(-50%,-50%);
+          transform:translate(-50%,-50%);
           h2{
             color: #fff;
             font-size: 60px;
@@ -308,6 +347,7 @@
         .item{
           img{
             border-radius: 50%;
+            border:1px solid #000;
             width: 300px;
             height: 300px;
           }

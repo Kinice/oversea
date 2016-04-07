@@ -1,0 +1,11 @@
+;(function(){
+    $(document).scroll(function(){
+        if($(document).scrollTop()>100){
+            $(".g-hd").css("marginTop","-70px");
+            $(".logo").css("marginTop","-30px");
+        }else{
+            $(".g-hd").css("marginTop","0");
+            $(".logo").css("marginTop","0");
+        }
+    });
+})();
