@@ -22,7 +22,8 @@
     width: 100%;
     background-color: rgba(255,255,255,0.6);
     .nav-inner{
-      width: 1200px;
+      margin: 0 auto;
+      width: 960px;
       line-height: 50px;
       .sub-left{
         float:left;
@@ -124,6 +125,55 @@
       height: 100%;
       left: 0;
       top: 0;
+    }
+    .arrow{
+      position: absolute;
+      z-index: 4;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      padding: 0 40px;
+      .arrow-l{
+        cursor: pointer;
+        float: left;
+        width:35px;
+        height: 35px;
+        border-color: transparent transparent #fff #fff;
+        border-width: 4px;
+        border-style: solid;
+        transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+      }
+      .arrow-r{
+         cursor: pointer;
+         float: right;
+         width: 35px;
+         height: 35px;
+         border-color: #fff #fff transparent transparent ;
+         border-width: 4px;
+         border-style: solid;
+         transform:rotate(45deg);
+         -webkit-transform:rotate(45deg);
+       }
+    }
+    .pointer{
+      position: absolute;
+      z-index:4;
+      bottom: 50px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      span{
+        font-size: 0;
+        border: 5px solid #999;
+        width: 0;
+        height: 0;
+        border-radius: 100%;
+        margin-right: 40px;
+      }
+      .checked{
+        border-color: #fff;
+      }
     }
     .slider-item{
       position: absolute;
