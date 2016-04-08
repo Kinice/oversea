@@ -4,6 +4,12 @@
     index : 0,
     animateTime : 800,
     slideTime : 5000,
+    createPoint : function(){
+
+    },
+    changePoint : function(index){
+
+    },
     slide : function(index){
       this.$con.eq(index).siblings('.slider-item').animate({
         opacity : 0
