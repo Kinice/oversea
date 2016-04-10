@@ -5,12 +5,18 @@
     animateTime : 800,
     slideTime : 5000,
     createPoint : function(){
-
+      var max = $('.slider-item').length;
+      for(var i = 0; i < max; i++){
+        $('.pointer').append('<span></span>');
+      }
+      $('.pointer').find('span').eq(0).addClass('checked');
     },
     changePoint : function(index){
-
+      $('.pointer').find('span').removeClass();
+      $('.pointer').find('span').eq(index).addClass('checked');
     },
     slide : function(index){
+      this.changePoint(index);
       this.$con.eq(index).siblings('.slider-item').animate({
         opacity : 0
       },this.animateTime);
@@ -20,7 +26,7 @@
       this.$con.eq(index).css('display','block');
       this.$con.eq(index).animate({
         opacity : 1
-      },800);
+      },this.animateTime);
     },
     autoShow : function(){
       this.index += 1;
@@ -37,7 +43,7 @@
       this.$con.eq(0).css('opacity','1');
       this.$con.eq(0).siblings('.slider-item').css('opacity','0');
       intimer = setInterval(this.autoShow.bind(this),this.slideTime);
-
+      this.createPoint();
         $('.g-slider').hover(function(){
             clearInterval(intimer);
         },function(){
@@ -75,11 +81,23 @@
                 setTimeout(function(){
                     isAnimating = false;
                 },this.animateTime);
-                console.log(this.index);
             }else{
                 return false;
             }
         }.bind(this));
+
+        $('.pointer span').on('click',function(){
+          if(!isAnimating){
+            var nowIndex = $(this).index();
+            isAnimating = true;
+            slider.slide(nowIndex);
+            setTimeout(function(){
+                isAnimating = false;
+            },this.animateTime);
+          }else{
+            return false;
+          }
+        });
     }
   }
   slider.init();
