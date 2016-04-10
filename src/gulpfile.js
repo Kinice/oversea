@@ -33,7 +33,7 @@ gulp.task('browser-sync',['styles'], function() {
 gulp.task('browser-sync',['styles'],function(){
   Browsersync.init({
         server: {
-            baseDir: "../views"
+            baseDir: "../"
         }
     });
     gulp.watch('./static/less/*.less', ['styles']);
