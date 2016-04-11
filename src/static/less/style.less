@@ -246,6 +246,7 @@
     min-width: 1410px;
     .section{
       padding: 50px 0;
+      overflow: hidden;
     }
     .section-a{
       .items{
@@ -416,4 +417,33 @@
 }
 .g-ft{
 
+}
+.f-video{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  z-index: 10;
+  width: 60%;
+  height: 60%;
+  background-color: #ffffff;
+  .close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    line-height: 20px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+.mask{
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
 }
