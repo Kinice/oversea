@@ -85,7 +85,7 @@
                 return false;
             }
         }.bind(this));
-
+/*
         $('.pointer span').on('click',function(){
           if(!isAnimating){
             var nowIndex = $(this).index();
@@ -97,7 +97,7 @@
           }else{
             return false;
           }
-        });
+        }); */
     }
   }
   slider.init();
