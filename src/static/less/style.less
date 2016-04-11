@@ -114,6 +114,108 @@
 }
 .g-bd{
   height: 100%;
+  .g-support{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 120px;
+    background-image: url(../images/test6.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    &:after{
+      background-color: rgba(120,120,120,0.2);
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+    .top-logo{
+      position: relative;
+      z-index: 2;
+      padding: 40px 150px;
+      line-height: 30px;
+      height: 30px;
+      .top-logo-l{
+        color:#fff;
+        float: left;
+        font-size: 30px;
+      }
+      .top-logo-r{
+        a{
+          color:#fff;
+          margin-right: 20px;
+        }
+        float: right;
+        font-size: 18px;
+      }
+    }
+    .search-input{
+      position: absolute;
+      z-index: 3;
+      top:  48%;
+      left: 50%;
+      -webkit-transform:translate(-50%,-50%);
+      input{
+        padding: 0 45px;
+        outline: none;
+        border: 1px solid #666;
+        background-color: transparent;
+        width: 800px;
+        height: 50px;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 30px;
+        background-image: url(../images/search.png);
+        background-repeat: no-repeat;
+        background-position: 5px center;
+        background-size: 35px 35px;
+      }
+      ::-webkit-input-placeholder {
+        color: #fff;
+      }
+      :-moz-placeholder {
+        color: #fff;
+      }
+      ::-moz-placeholder {
+        color: #fff;
+      }
+      :-ms-input-placeholder {
+        color: #fff;
+      }
+    }
+    .faq{
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform:translateX(-50%);
+      -webkit-transform:translateX(-50%);
+      color: #000;
+      width: 1000px;
+      padding: 20px 10px 50px;
+      background-color: rgba(255,255,255,0.65);
+      .faq-top{
+        padding-left: 10px;
+        font-size: 20px;
+        border-bottom: 1px solid #000;
+      }
+      .faqs{
+        vertical-align: top;
+        margin-left: 10px;
+        margin-right: 20px;
+        width: 290px;
+        display: inline-block;
+        h3{
+          font-size: 24px;
+          font-weight: bold;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+  }
   .g-slider{
     width: 100%;
     height: 100%;
