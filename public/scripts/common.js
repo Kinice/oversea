@@ -29,4 +29,35 @@
             $('.f-video').remove();
         },600);
     });
-})();
+    var oriTitle = document.title;
+    console.log(oriTitle);
+    (function(){
+        var hidden,state,visibilityChange;
+        if(typeof document.hidden !=='undefined'){
+            hidden = 'hidden';
+            visibilityChange = 'visibilitychange';
+            state = 'visibilityState';
+        }else if(typeof document.mozHidden !=='undefined'){
+            hidden = 'mozHidden';
+            visibilityChange = 'mozvisibilitychange';
+            state = 'mozVisibilityState';
+        }else if(typeof document.webkitHidden !=='undefined'){
+            hidden = 'webkitHidden';
+            visibilityChange = 'webkitvisibilitychange';
+            state = 'webkitVisibilityState';
+        }else if(typeof document.msHidden !=='undefined'){
+            hidden = 'msHidden';
+            visibilityChange = 'msvisibilitychange';
+            state = 'msVisibilityState';
+        }
+        console.log(hidden+','+visibilityChange+','+state);
+        document.addEventListener(visibilityChange,function(){
+            var h = event.target[hidden];
+            if(h){
+                document.title='(｡・`ω´･)'+oriTitle;
+            }else{
+                document.title = oriTitle;
+            }
+        },true);
+    }());
+}());

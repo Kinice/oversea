@@ -15,7 +15,7 @@
       $('.pointer').find('span').removeClass();
       $('.pointer').find('span').eq(index).addClass('checked');
     },
-    slide : function(index){
+    fade : function(index){
       this.changePoint(index);
       this.$con.eq(index).siblings('.slider-item').animate({
         opacity : 0
@@ -31,10 +31,10 @@
     autoShow : function(){
       this.index += 1;
       if(this.index <= 2 - 1){
-          this.slide(this.index);
+          this.fade(this.index);
       }else{
           this.index = 0;
-          this.slide(this.index);
+          this.fade(this.index);
       }
     },
     init : function(){
@@ -49,16 +49,15 @@
         },function(){
             intimer = setInterval(this.autoShow.bind(this),this.slideTime);
         }.bind(this));
-
         $('.arrow-r').click(function(){
             if(!isAnimating){
                 isAnimating = true;
                 this.index += 1;
                 if(this.index <= max-1){
-                    this.slide(this.index);
+                    this.fade(this.index);
                 }else{
                     this.index = 0;
-                    this.slide(this.index)
+                    this.fade(this.index)
                 }
                 setTimeout(function(){
                     isAnimating = false;
@@ -74,9 +73,9 @@
                 this.index -= 1;
                 if (this.index < 0) {
                     this.index = max - 1;
-                    this.slide(this.index);
+                    this.fade(this.index);
                 } else {
-                    this.slide(this.index)
+                    this.fade(this.index)
                 }
                 setTimeout(function(){
                     isAnimating = false;
