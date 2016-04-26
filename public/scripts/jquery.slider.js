@@ -42,12 +42,16 @@
       var isAnimating = false;
       this.$con.eq(0).css('opacity','1');
       this.$con.eq(0).siblings('.slider-item').css('opacity','0');
-      intimer = setInterval(this.autoShow.bind(this),this.slideTime);
+        intimer = setInterval(function(){
+            this.autoShow()
+        }.bind(this),this.slideTime);
       this.createPoint();
         $('.g-slider').hover(function(){
             clearInterval(intimer);
         },function(){
-            intimer = setInterval(this.autoShow.bind(this),this.slideTime);
+            intimer = setInterval(function(){
+                this.autoShow()
+            }.bind(this),this.slideTime);
         }.bind(this));
         $('.arrow-r').click(function(){
             if(!isAnimating){

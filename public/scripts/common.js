@@ -1,7 +1,7 @@
 ;(function(){
     $(document).scroll(function(){
         if($(document).scrollTop()>100){
-            $(".g-hd").css("marginTop","-70px");
+            $(".g-hd").css("marginTop","-77.5px");
             $(".logo").css("marginTop","-30px");
         }else{
             $(".g-hd").css("marginTop","0");
