@@ -21,9 +21,8 @@
         opacity : 0
       },this.animateTime);
       timer = setTimeout(function(){
-          this.$con.eq(index).siblings('.slider-item').css('display','none');
+          this.$con.eq(index).siblings('.slider-item');
       }.bind(this),this.animateTime);
-      this.$con.eq(index).css('display','block');
       this.$con.eq(index).animate({
         opacity : 1
       },this.animateTime);
@@ -88,19 +87,19 @@
                 return false;
             }
         }.bind(this));
-/*
         $('.pointer span').on('click',function(){
+          if($(this).attr('class')=='checked')return false;
           if(!isAnimating){
-            var nowIndex = $(this).index();
             isAnimating = true;
-            slider.slide(nowIndex);
+            var nowIndex = $(this).index();
+            slider.fade(nowIndex);
             setTimeout(function(){
                 isAnimating = false;
             },this.animateTime);
           }else{
             return false;
           }
-        }); */
+        });
     }
   }
   slider.init();
