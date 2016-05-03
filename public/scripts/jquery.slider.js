@@ -35,21 +35,24 @@
           this.index = 0;
           this.fade(this.index);
       }
+      timer = setTimeout(function(){
+          this.autoShow();
+      }.bind(this),this.slideTime);
     },
     init : function(){
       var max = $('.slider-item').length;
       var isAnimating = false;
       this.$con.eq(0).css('opacity','1');
       this.$con.eq(0).siblings('.slider-item').css('opacity','0');
-        intimer = setInterval(function(){
-            this.autoShow()
+        timer = setTimeout(function(){
+            this.autoShow();
         }.bind(this),this.slideTime);
       this.createPoint();
         $('.g-slider').hover(function(){
-            clearInterval(intimer);
+            clearTimeout(timer);
         },function(){
-            intimer = setInterval(function(){
-                this.autoShow()
+            timer = setTimeout(function(){
+                this.autoShow();
             }.bind(this),this.slideTime);
         }.bind(this));
         $('.arrow-r').click(function(){
