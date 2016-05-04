@@ -2,6 +2,7 @@
 @oriange:#f39200;
 @greyback:#f3f3f3;
 @sectionh2:40px;
+@sectionp:16px;
 //header
 .point1{
   color: @oriange;
@@ -13,6 +14,44 @@
 .g-section{
   min-width: 1200px;
   .section{
+    h2{
+      font-size: @sectionh2;
+    }
+    p{
+      font-size: @sectionp;
+    }
+    .items-2{
+      width: 1200px;
+      margin: 0 auto;
+      .item{
+        box-sizing: border-box;
+        margin:0 48px;
+        display: inline-block;
+        width: 500px;
+        vertical-align: top;
+      }
+    }
+    .items-3{
+      width: 1200px;
+      margin: 0 auto;
+      .item{
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: top;
+        width: 320px;
+        margin: 0 30px;
+      }
+    }
+    .items-4{
+      width: 1200px;
+      margin: 0 auto 40px;
+      padding-top: 40px;
+      .item{
+        margin: 0 23px;
+        width: 250px;
+        display: inline-block;
+      }
+    }
     padding: 50px 0;
     overflow: hidden;
   }
@@ -363,13 +402,8 @@
     .g-section;
     .section-a{
       .items{
-        width: 1200px;
-        margin: 0 auto;
         .item{
-          width: 320px;
-          display: inline-block;
           margin:20px 30px;
-          vertical-align: top;
           h3{
             font-size: 23px;
           }
@@ -379,12 +413,6 @@
     .section-b{
       background-color: @greyback;
       text-align: center;
-      h2{
-        font-size: @sectionh2;
-      }
-      p{
-        font-size: 16px;
-      }
       .img-part{
         position: relative;
         padding: 50px;
@@ -420,14 +448,9 @@
     }
     .section-c{
       text-align: center;
-      h2{
-        text-align: center;
-        font-size: @sectionh2;
-      }
       .intro{
         width: 725px;
         margin: 20px auto 50px;
-
         p{
           text-align: left;
           vertical-align: top;
@@ -443,9 +466,6 @@
     .section-d{
       background-color: @greyback;
       text-align: center;
-      h2{
-        font-size: @sectionh2;
-      }
       .img-part{
         padding: 50px 0;
         .img-info{
@@ -507,12 +527,7 @@
     }
     .section-e{
       text-align: center;
-      h2{
-        font-size: @sectionh2;
-      }
-      .items{
-        width: 1200px;
-        margin: 0 auto;
+      .items-3{
         .item{
           img{
             border-radius: 50%;
@@ -520,11 +535,9 @@
             width: 240px;
             height: 240px;
           }
-          width: 320px;
-          display: inline-block;
-          vertical-align: top;
           margin:20px 30px;
           p{
+            margin-top:20px;
             text-align: left;
           }
           h4{
@@ -536,12 +549,6 @@
     }
     .section-f{
       background-color: @greyback;
-      h2{
-        font-size: @sectionh2;
-      }
-      p{
-        font-size: 16px;
-      }
       .play{
         display: inline-block;
         width: 1200px;
@@ -568,24 +575,6 @@
     }
     .section-g{
       text-align: center;
-      h2{
-        font-size: @sectionh2;
-      }
-      .items-2{
-        width: 1200px;
-        margin: 0 auto;
-        .item{
-          box-sizing: border-box;
-          padding: 5px;
-          display: inline-block;
-          width: 500px;
-          margin:0 48px;
-          border: 1px solid #bbb;
-        }
-        .item:hover{
-          border-color: @oriange;
-        }
-      }
       a{
         display: inline-block;
         border: 1px solid #bbb;
@@ -669,21 +658,11 @@
     .section-b{
       background-color: @greyback;
       text-align: center;
-      h2{
-        font-size: @sectionh2;
-      }
       .say{
         font-size: 17px;
       }
-      .items{
-        .clearfix;
-        width: 1200px;
-        margin: 0 auto 40px;
-        padding-top: 40px;
+      .items-4{
         .item{
-          margin: 0 25px;
-          width: 250px;
-          float: left;
           p{
             padding: 10px;
           }
@@ -732,9 +711,6 @@
     }
     .section-b{
       background-color: @greyback;
-      h2{
-        font-size: 34px;
-      }
       text-align: center;
       .compare{
         box-sizing: border-box;
