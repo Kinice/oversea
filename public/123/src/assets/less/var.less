@@ -1,0 +1,47 @@
+@baseColor:#333;
+@bgColor:#fff;
+@linkColor:#333;
+@strongColor:#802b91;
+@borderColor:#ddd;
+@sideWidth: 220px;
+@headerHeight: 50px;
+
+.clearfix() {
+	&:after{
+		clear: both;
+		content: ".";
+		display: block;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+}
+
+.middle(){
+	&:before{
+		display: inline-block;
+		width: 0;
+		height: 100%;
+		vertical-align: middle;
+		content: '';
+	}
+}
+.box(){
+	border:1px solid #e2e2e2;
+	background-color: #fff;
+	box-shadow: 0 0 3px #e2e2e2;
+}
+.opacity(@opacity){
+	filter: Alpha(Opacity=@opacity);
+	opacity:@opacity/100;
+}
+.textoverflow(){
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+
+
+
+
+
